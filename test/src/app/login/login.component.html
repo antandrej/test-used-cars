@@ -1,12 +1,16 @@
 <h1>Login</h1>
 <div>
     <form>
-        <label>Username</label><br>
-        <input type="text" name="username" ng-model="users.username" required/><br><br>
+        <label for="username">Username</label><br>
+        <input type="text" name="username" [(ngModel)]="username" required/><br><br>
 
-        <label>Password</label><br>
-        <input type="password" name="password" ng-model="users.password" required/><br><br><br>
+        <label for="password">Password</label><br>
+        <input type="password" name="password" [(ngModel)]="password" required/><br><br><br>
 
         <button (click)="login()">Login</button>
     </form>
 </div>
+
+<!--
+<p *ngFor="let user of users">{{user.username}}</p>
+-->

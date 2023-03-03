@@ -3,14 +3,36 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class UsersService {
+export class UsersService{
 
   constructor() { }
 
-  getUsers(){
-    return [ 
-      {"username": "ane", "password": "anepass"},
-      {"username": "glisa", "password": "glisapass"}
-    ];
+
+  users:{username: string, password:string}[] = [{
+    username: "ane",
+    password: "anepass"
+  },
+  {
+    username: "glisa",
+    password: "glisapass"
+  }]
+
+  getUsers() {
+    return this.users;
+    /*
+    type userData = Array<{username: string, password: string}>;
+
+    const arr:userData = [{
+      username: "ane",
+      password: "anepass"
+    },
+    {
+      username: "glisa",
+      password: "glisapass"
+    }
+  ]
+
+  return arr;
+  */
   }
 }
