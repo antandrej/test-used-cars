@@ -1,7 +1,8 @@
-<div>
-    <img src="">
-    <h3>Car Make</h3>
-    <h5>Car Model</h5>
-    <p>Car Mileage</p>
-    <h5>Car Price</h5>
+<div *ngFor="let car of cars">
+    <img [src]="car.image">
+    <h3>{{car.make}}</h3>
+    <h5>{{car.model}}</h5>
+    <p>Mileage: {{car.mileage | number}}</p>
+    <p>Horsepower: {{car.horsepower | number}}</p>
+    <h5>Price: {{car.price | number}}</h5>
 </div>
