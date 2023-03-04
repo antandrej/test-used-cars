@@ -12,11 +12,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { loginGuardService } from './loginGuard.service';
 import { AuthService } from './auth.service';
 import { OfferComponent } from './main/offer/offer.component';
+import { AdminComponent } from './main/admin/admin.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
   { path: 'login', component: LoginComponent},
   { path: 'main', component: MainComponent, canActivate: [loginGuardService]},
+  { path: 'admin', component: AdminComponent, canActivate: [loginGuardService]},
   { path: '**', redirectTo: 'login', pathMatch: 'full'}
 ];
 
@@ -26,7 +28,8 @@ const routes: Routes = [
     LoginComponent,
     MainComponent,
     NavbarComponent,
-    OfferComponent
+    OfferComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,  

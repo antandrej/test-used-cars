@@ -15,7 +15,8 @@ export class UsersService{
   {
     username: "glisa",
     password: "glisapass"
-  }]
+  }
+  ]
 
   getUsers() {
     return this.users;

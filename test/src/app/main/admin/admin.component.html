@@ -1,4 +1,5 @@
-<h1>Login</h1>
+<app-navbar></app-navbar>
+<h1>Welcome</h1>
 <div>
     <form>
         <label for="username">Username</label><br>
@@ -7,6 +8,10 @@
         <label for="password">Password</label><br>
         <input type="password" name="password" [(ngModel)]="password" required/><br><br><br>
 
-        <button (click)="login()">Login</button>
+        <button (click)="addUser()">Add new user</button>
     </form>
 </div>
+<br><br><br>
+<p>List of all Users</p>
+<p *ngFor="let user of users">{{user.username}}</p>
+
