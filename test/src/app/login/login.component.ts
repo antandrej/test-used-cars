@@ -15,7 +15,7 @@ export class LoginComponent  implements OnInit{
   public password;
 
 
-  constructor(private _usersService: UsersService, private auth: AuthService) {}
+  constructor(private _usersService: UsersService, private auth: AuthService, private route: Router) {}
 
   ngOnInit() {
     this.users = this._usersService.getUsers();
@@ -25,6 +25,7 @@ export class LoginComponent  implements OnInit{
     const user = this.users.find(user => user.username === this.username && user.password === this.password);
     if (user) {
       this.auth.login();
+      this.route.navigate(['main']);
     } else {
       alert("Invalid username or password!");
     }

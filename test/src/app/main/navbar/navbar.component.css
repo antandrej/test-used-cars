@@ -1,0 +1,21 @@
+#container{
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0;
+    background-color: lightblue;
+    margin: 0;
+}
+a{
+    margin-left: 30px;
+    padding: 10px;
+    background-color: lightblue;
+    text-align: center;
+    justify-items: center;
+}
+a:hover{
+    color: white;
+    cursor: pointer;
+}

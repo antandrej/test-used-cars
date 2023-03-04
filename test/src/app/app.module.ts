@@ -11,6 +11,7 @@ import { NavbarComponent } from './main/navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { loginGuardService } from './loginGuard.service';
 import { AuthService } from './auth.service';
+import { OfferComponent } from './main/offer/offer.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -24,7 +25,8 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     MainComponent,
-    NavbarComponent
+    NavbarComponent,
+    OfferComponent
   ],
   imports: [
     BrowserModule,  
