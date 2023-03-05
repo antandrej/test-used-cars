@@ -21,9 +21,9 @@ interface Cars {
 export class OfferComponent{
 
   cars:Cars[] = carsData;
-  public selectedCar?: Cars;
+  public selectedCar: Cars = carsData[0];
   
-
+  
   constructor(private route: Router, private selectedCarService: SelectedCarService) {
   }
   

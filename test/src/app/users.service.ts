@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
+
 export class UsersService{
 
   constructor() { }
@@ -20,20 +21,5 @@ export class UsersService{
 
   getUsers() {
     return this.users;
-    /*
-    type userData = Array<{username: string, password: string}>;
-
-    const arr:userData = [{
-      username: "ane",
-      password: "anepass"
-    },
-    {
-      username: "glisa",
-      password: "glisapass"
-    }
-  ]
-
-  return arr;
-  */
   }
 }

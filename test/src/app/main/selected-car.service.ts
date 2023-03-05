@@ -1,3 +1,10 @@
+import { Injectable } from '@angular/core';
+import carsData from '../cars.json';
+
+Injectable({
+  providedIn: 'root'
+})
+
 interface Cars {
     image: string;
     make: string;
@@ -8,5 +15,5 @@ interface Cars {
   }
 
 export class SelectedCarService {
-    public selectedCar!: Cars;
+    public selectedCar: Cars = carsData[0];
 }
