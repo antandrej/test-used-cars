@@ -1,16 +1,10 @@
-*{
-    margin: 5px;
-}
 div{
     display: flex;
     flex-direction: column;
     background-color: rgb(109, 124, 139);
     margin: 50px;
-}
-div:hover{
-    background-color: rgb(127, 144, 161);
-    cursor: pointer;
-    transition: all 0.33s ease-in-out;
+    align-items: center;
+    flex-direction: column-reverse;
 }
 img{
     width: 500px;

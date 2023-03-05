@@ -13,12 +13,15 @@ import { loginGuardService } from './loginGuard.service';
 import { AuthService } from './auth.service';
 import { OfferComponent } from './main/offer/offer.component';
 import { AdminComponent } from './main/admin/admin.component';
+import { SelectedCarComponent } from './main/selected-car/selected-car.component';
+import { SelectedCarService } from './main/selected-car.service';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
   { path: 'login', component: LoginComponent},
   { path: 'main', component: MainComponent, canActivate: [loginGuardService]},
   { path: 'admin', component: AdminComponent, canActivate: [loginGuardService]},
+  { path: 'car', component: SelectedCarComponent, canActivate: [loginGuardService]},
   { path: '**', redirectTo: 'login', pathMatch: 'full'}
 ];
 
@@ -29,7 +32,8 @@ const routes: Routes = [
     MainComponent,
     NavbarComponent,
     OfferComponent,
-    AdminComponent
+    AdminComponent,
+    SelectedCarComponent
   ],
   imports: [
     BrowserModule,  
@@ -41,7 +45,7 @@ const routes: Routes = [
   exports: [
     RouterModule
   ],
-  providers: [UsersService, loginGuardService, AuthService],
+  providers: [UsersService, loginGuardService, AuthService, SelectedCarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

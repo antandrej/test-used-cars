@@ -1,6 +1,6 @@
 export class AuthService {
 
-    loggedIn: boolean = false;
+    loggedIn: boolean = true;
 
     login() {
         this.loggedIn = true;
