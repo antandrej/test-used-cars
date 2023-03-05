@@ -1,12 +1,12 @@
 <app-navbar></app-navbar>
-<h1>Welcome</h1>
+<h1>Welcome {{user.username}}</h1>
 <div>
     <form>
         <label for="username">Username</label><br>
-        <input type="text" name="username" [(ngModel)]="username" required/><br><br>
+        <input type="text" name="username" required [(ngModel)]="username"/><br><br>
 
         <label for="password">Password</label><br>
-        <input type="password" name="password" [(ngModel)]="password" required/><br><br><br>
+        <input type="password" name="password" required [(ngModel)]="password"/><br><br><br>
 
         <button (click)="addUser()">Add new user</button>
     </form>
@@ -14,4 +14,3 @@
 <br><br><br>
 <p>List of all Users</p>
 <p *ngFor="let user of users">{{user.username}}</p>
-

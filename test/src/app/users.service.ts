@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { LoginComponent } from './login/login.component';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +9,7 @@ export class UsersService{
 
   constructor() { }
 
+  public user;
 
   users:{username: string, password:string}[] = [{
     username: "ane",
@@ -22,4 +24,9 @@ export class UsersService{
   getUsers() {
     return this.users;
   }
+
+  getUser() {
+    return this.user;
+  }
+
 }

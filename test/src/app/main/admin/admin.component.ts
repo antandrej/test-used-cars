@@ -16,11 +16,14 @@ export class AdminComponent{
   public username;
   public password;
 
+  public user;
 
   constructor(private _usersService: UsersService, private auth: AuthService, private route: Router) {}
 
   ngOnInit() {
     this.users = this._usersService.getUsers();
+    this.user = this._usersService.getUser();
+    console.log(this.user);
   }
 
   public addUser(){
