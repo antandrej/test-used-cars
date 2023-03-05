@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'main', component: MainComponent, canActivate: [loginGuardService]},
   { path: 'admin', component: AdminComponent, canActivate: [loginGuardService]},
   { path: 'car', component: SelectedCarComponent, canActivate: [loginGuardService]},
-  { path: '**', redirectTo: 'login', pathMatch: 'full'}
+  { path: '**', redirectTo: 'login'}
 ];
 
 @NgModule({
